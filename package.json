@@ -1,6 +1,6 @@
 {
   "name": "@xiaowaibuzheng/rname",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A CLI tool for batch renaming files with Chinese characters to pinyin or English translation",
   "main": "dist/index.js",
   "module": "es/index.js",
@@ -32,7 +32,13 @@
     "node": ">=20",
     "pnpm": ">=10"
   },
-  "keywords": ["rename", "translate", "cli", "batch-rename", "chinese"],
+  "keywords": [
+    "rename",
+    "translate",
+    "cli",
+    "batch-rename",
+    "chinese"
+  ],
   "author": "waibuzheng",
   "license": "ISC",
   "devDependencies": {
