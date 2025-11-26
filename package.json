@@ -39,15 +39,16 @@
   "author": "waibuzheng",
   "license": "ISC",
   "devDependencies": {
-    "@antfu/eslint-config": "^5.2.0",
-    "@types/node": "^24.2.0",
-    "eslint-plugin-format": "^1.0.1",
-    "lint-staged": "^16.1.4",
+    "@antfu/eslint-config": "^6.2.0",
+    "@types/node": "^24.10.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-format": "^1.0.2",
+    "lint-staged": "^16.2.7",
     "standard-version": "^9.5.0",
-    "tsdown": "^0.13.3"
+    "tsdown": "^0.16.7"
   },
   "dependencies": {
-    "bing-translate-api": "^4.0.2",
+    "bing-translate-api": "^4.2.0",
     "es-toolkit": "^1.42.0"
   }
 }
