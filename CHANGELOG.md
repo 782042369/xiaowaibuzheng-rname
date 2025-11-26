@@ -1,6 +1,13 @@
 # 更新记录 
 
 
+### [0.0.4](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.3...v0.0.4) (2025-11-26)
+
+
+### 📦‍ Build System | 打包构建
+
+* **deps:** 更新依赖包版本 ([cc97e3f](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/cc97e3f6683423b1871225223a8481a8a4c76d96))
+
 ### [0.0.3](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.2...v0.0.3) (2025-11-26)
 
 

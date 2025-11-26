@@ -1,6 +1,6 @@
 {
   "name": "@xiaowaibuzheng/rname",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A CLI tool for batch renaming files with Chinese characters to pinyin or English translation",
   "type": "module",
   "bin": {
