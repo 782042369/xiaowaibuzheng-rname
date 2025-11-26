@@ -1,6 +1,13 @@
 # 更新记录 
 
 
+### [0.0.5](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.4...v0.0.5) (2025-11-26)
+
+
+### ✨ Features | 新功能
+
+* **package:** 将入口文件扩展名从 .js 更新为 .mjs ([5bf3b05](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/5bf3b05ada89b3c1dc2a44be44e582e337471991))
+
 ### [0.0.4](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.3...v0.0.4) (2025-11-26)
 
 
