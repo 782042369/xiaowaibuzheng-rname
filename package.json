@@ -1,18 +1,50 @@
 {
-  "name": "bz-rname",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@xiaowaibuzheng/rname",
+  "version": "0.0.0",
+  "description": "A CLI tool for batch renaming files with Chinese characters to pinyin or English translation",
+  "main": "dist/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "type": "module",
+  "bin": {
+    "rname": "./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "watch": "tsdown --watch",
+    "build": "tsdown",
+    "lint": "eslint --fix",
+    "prepublishOnly": "pnpm run build",
+    "release": "standard-version && npm publish && git push --tags"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/782042369/xiaowaibuzheng-rname.git.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "keywords": ["rename", "translate", "cli", "batch-rename", "chinese"],
+  "author": "waibuzheng",
   "license": "ISC",
-  "packageManager": "pnpm@10.11.0",
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.2.0",
+    "@types/node": "^24.2.0",
+    "eslint-plugin-format": "^1.0.1",
+    "lint-staged": "^16.1.4",
+    "standard-version": "^9.5.0",
+    "tsdown": "^0.13.3"
+  },
   "dependencies": {
     "bing-translate-api": "^4.0.2",
-    "lodash.camelcase": "^4.3.0",
-    "pinyin-pro": "^3.26.0"
+    "es-toolkit": "^1.42.0"
   }
 }
