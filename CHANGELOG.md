@@ -1,6 +1,13 @@
 # 更新记录 
 
 
+### [0.0.3](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.2...v0.0.3) (2025-11-26)
+
+
+### ✨ Features | 新功能
+
+* **package:** 更新 bin 字段中的命令名为带作用域的名称 ([e3f3c09](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/e3f3c09e9d8a589235b11b0b88489d782e95dc4b))
+
 ### [0.0.2](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.1...v0.0.2) (2025-11-26)
 
 
