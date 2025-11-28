@@ -15,14 +15,9 @@ import { CONFIG } from '../constants'
 async function convertFilename(text: string): Promise<string> {
   try {
     const result = await translate(text, null, 'en')
-
-    if (result?.translation) {
-      return camelCase(result.translation)
-    }
-    return text // 翻译失败返回原文
+    return result?.translation ? camelCase(result.translation) : text
   }
-  catch (error: any) {
-    console.error(`翻译失败: ${text} - ${error.message}`)
+  catch {
     return text
   }
 }
@@ -35,11 +30,13 @@ async function convertFilename(text: string): Promise<string> {
  * @returns 唯一的文件路径
  */
 function getUniquePath(dir: string, base: string, ext: string) {
-  let count = 0
   let newPath = path.join(dir, base + ext)
+  if (!CONFIG.skipExisting || !fs.existsSync(newPath))
+    return newPath
 
-  while (CONFIG.skipExisting && fs.existsSync(newPath)) {
-    newPath = path.join(dir, `${base}-${++count}${ext}`)
+  let count = 1
+  while (fs.existsSync(newPath)) {
+    newPath = path.join(dir, `${base}-${count++}${ext}`)
   }
   return newPath
 }
@@ -64,21 +61,14 @@ export async function processFiles(directory: string, mode: ModeType) {
       const hasChinese = /[\u4E00-\u9FFF]/.test(parsed.name)
 
       // 如果没有中文且不包含@2x，则跳过
-      if (!hasChinese && !parsed.name.includes('@2x')) {
+      if (!hasChinese && !parsed.name.includes('@2x'))
         continue
-      }
 
-      let newBase = parsed.name
-      // 如果有中文，则进行翻译
-      if (hasChinese) {
-        // 先去掉@2x再翻译
-        newBase = await convertFilename(parsed.name.replaceAll('@2x', ''))
-      }
-      // 如果没有中文但包含@2x，则只需要去掉@2x并转为驼峰命名
-      else if (parsed.name.includes('@2x')) {
-        const nameWithoutAt2x = parsed.name.replaceAll('@2x', '')
-        newBase = camelCase(nameWithoutAt2x)
-      }
+      // 处理文件名（移除@2x）
+      const nameWithoutAt2x = parsed.name.replaceAll('@2x', '')
+      const newBase = hasChinese
+        ? await convertFilename(nameWithoutAt2x)
+        : camelCase(nameWithoutAt2x)
 
       const newPath = getUniquePath(directory, newBase, parsed.ext)
       const newName = path.basename(newPath)
@@ -92,11 +82,13 @@ export async function processFiles(directory: string, mode: ModeType) {
         console.log(`⏩ 跳过: ${oldName} (无需修改)`)
       }
 
-      // 添加延迟以避免API调用过于频繁
-      await new Promise(resolve => setTimeout(resolve, CONFIG.delay))
+      // 添加延迟以避免API调用过于频繁（仅在需要翻译时）
+      if (hasChinese) {
+        await new Promise(resolve => setTimeout(resolve, CONFIG.delay))
+      }
     }
     catch (error: any) {
-      console.error(`❌ 失败: ${oldName} - ${error.message}`)
+      console.error(`❌ 失败: ${oldName} - ${error.message || error}`)
     }
   }
 }
