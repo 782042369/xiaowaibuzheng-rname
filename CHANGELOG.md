@@ -1,6 +1,19 @@
 # 更新记录 
 
 
+### [0.0.7](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.6...v0.0.7) (2025-11-28)
+
+
+### ✨ Features | 新功能
+
+* **test:** 添加测试用例演示目录和测试命令 ([242c31e](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/242c31e2ad73e9bcad96a943e329fcc927dc0d94))
+* **utils:** 优化文件名处理逻辑以支持[@2x](https://github.com/2x)后缀的正确转换 ([3ace5e8](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/3ace5e8ee593fd397b1cdd7e46484ab6b7f20d6e))
+
+
+### 📝 Documentation | 文档
+
+* **readme:** 更新 README 文档内容与使用说明 ([401c857](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/401c857d2fb52ebf51ba950684244867be7e9407))
+
 ### [0.0.6](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.5...v0.0.6) (2025-11-28)
 
 
