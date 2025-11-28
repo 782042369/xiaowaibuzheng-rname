@@ -46,7 +46,7 @@
     "eslint-plugin-format": "^1.0.2",
     "lint-staged": "^16.2.7",
     "standard-version": "^9.5.0",
-    "tsdown": "^0.16.7"
+    "tsdown": "^0.16.8"
   },
   "dependencies": {
     "bing-translate-api": "^4.2.0",
