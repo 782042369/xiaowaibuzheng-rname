@@ -13,12 +13,6 @@ import { CONFIG } from '../constants'
  * @returns 翻译后的文本（驼峰命名）
  */
 async function convertFilename(text: string): Promise<string> {
-  // 检测是否包含中文字符
-  const hasChinese = /[\u4E00-\u9FFF]/.test(text)
-
-  if (!hasChinese)
-    return text // 无中文直接返回原名
-
   try {
     const result = await translate(text, null, 'en')
 
@@ -63,9 +57,16 @@ export async function processFiles(directory: string, mode: ModeType) {
       continue
 
     const oldName = dirent.name
+
+    // 无中文直接返回原名
     const parsed = path.parse(oldName)
 
     try {
+      // 检测是否包含中文字符
+      const hasChinese = /[\u4E00-\u9FFF]/.test(parsed.name)
+
+      if (!hasChinese)
+        continue
       // 转换文件名主体（去掉@2x后缀后再转换）
       const newBase = await convertFilename(parsed.name.replaceAll('@2x', ''))
       const newPath = getUniquePath(directory, newBase, parsed.ext)
