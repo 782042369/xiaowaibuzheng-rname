@@ -1,6 +1,13 @@
 # 更新记录 
 
 
+### [0.0.6](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.5...v0.0.6) (2025-11-28)
+
+
+### ✨ Features | 新功能
+
+* **utils:** 优化文件名转换逻辑避免重复处理 ([c8041b3](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/c8041b37d4af8f3f12879c1a1bea12533d40a09d))
+
 ### [0.0.5](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.4...v0.0.5) (2025-11-26)
 
 
