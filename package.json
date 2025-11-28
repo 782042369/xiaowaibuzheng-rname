@@ -11,7 +11,8 @@
     "build": "tsdown",
     "lint": "eslint --fix",
     "prepublishOnly": "pnpm run build",
-    "release": "standard-version && npm publish && git push --tags"
+    "release": "standard-version && npm publish && git push --tags",
+    "test": "pnpm run build && node ./dist/index.mjs ./test-demo"
   },
   "files": [
     "dist",
