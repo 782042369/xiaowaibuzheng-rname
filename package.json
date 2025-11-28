@@ -50,6 +50,6 @@
   },
   "dependencies": {
     "bing-translate-api": "^4.2.0",
-    "es-toolkit": "^1.42.0"
+    "camelcase": "^9.0.0"
   }
 }

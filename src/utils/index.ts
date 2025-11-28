@@ -1,5 +1,5 @@
 import { translate } from 'bing-translate-api'
-import { camelCase } from 'es-toolkit'
+import camelCase from 'camelcase'
 import fs from 'node:fs'
 import path from 'node:path'
 
