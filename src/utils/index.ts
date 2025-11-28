@@ -57,18 +57,29 @@ export async function processFiles(directory: string, mode: ModeType) {
       continue
 
     const oldName = dirent.name
-
-    // 无中文直接返回原名
     const parsed = path.parse(oldName)
 
     try {
       // 检测是否包含中文字符
       const hasChinese = /[\u4E00-\u9FFF]/.test(parsed.name)
 
-      if (!hasChinese)
+      // 如果没有中文且不包含@2x，则跳过
+      if (!hasChinese && !parsed.name.includes('@2x')) {
         continue
-      // 转换文件名主体（去掉@2x后缀后再转换）
-      const newBase = await convertFilename(parsed.name.replaceAll('@2x', ''))
+      }
+
+      let newBase = parsed.name
+      // 如果有中文，则进行翻译
+      if (hasChinese) {
+        // 先去掉@2x再翻译
+        newBase = await convertFilename(parsed.name.replaceAll('@2x', ''))
+      }
+      // 如果没有中文但包含@2x，则只需要去掉@2x并转为驼峰命名
+      else if (parsed.name.includes('@2x')) {
+        const nameWithoutAt2x = parsed.name.replaceAll('@2x', '')
+        newBase = camelCase(nameWithoutAt2x)
+      }
+
       const newPath = getUniquePath(directory, newBase, parsed.ext)
       const newName = path.basename(newPath)
 
