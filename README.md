@@ -9,20 +9,22 @@
 - 将包含中文的文件名翻译为英文并转换为驼峰命名格式
 - 支持跳过已存在的文件名以避免冲突
 - 支持通过 Bing 翻译 API 进行高质量翻译
+- 自动移除高清图片的 `@2x` 后缀
 - 可通过 npx 直接运行，无需全局安装
 
 ## 安装
-
-### 作为 CLI 工具全局安装
-
-```bash
-npm install -g @xiaowaibuzheng/rname
-```
 
 ### 使用 npx 直接运行（推荐）
 
 ```bash
 npx @xiaowaibuzheng/rname [directory]
+```
+
+### 作为 CLI 工具全局安装
+
+```bash
+npm install -g @xiaowaibuzheng/rname
+rname [directory]
 ```
 
 ## 使用方法
@@ -73,9 +75,9 @@ npx @xiaowaibuzheng/rname
 ## 注意事项
 
 1. 由于调用 Bing 翻译 API，会有一定延迟
-2. 工具会自动跳过不含中文字符的文件名
-3. 如果目标文件名已存在，工具会在新文件名后添加数字后缀以避免覆盖
-4. 对于带有 `@2x` 后缀的文件（通常为高清图片），会去除该后缀再进行转换
+2. 工具只会处理包含中文字符的文件名
+3. 对于带有 `@2x` 后缀的文件（通常为高清图片），会去除该后缀再进行转换
+4. 需要 Node.js 版本 >=20
 
 ## 依赖说明
 
