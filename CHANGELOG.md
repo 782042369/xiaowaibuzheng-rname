@@ -1,6 +1,18 @@
 # 更新记录 
 
 
+### [0.0.8](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.7...v0.0.8) (2025-11-28)
+
+
+### ✅ Tests | 测试
+
+* **test-demo:** 更新测试用例文件名及 README 文档 ([1988458](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/1988458bd0bea013947dcd86c22a37e06d12ac8f))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* **utils:** 优化文件名转换与路径生成逻辑 ([cb8356a](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/cb8356afa972584982cc068a26269a6054da3695))
+
 ### [0.0.7](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.6...v0.0.7) (2025-11-28)
 
 
