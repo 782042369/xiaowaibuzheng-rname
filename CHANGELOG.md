@@ -1,6 +1,19 @@
 # 更新记录 
 
 
+### [0.0.9](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.8...v0.0.9) (2025-11-28)
+
+
+### 📦‍ Build System | 打包构建
+
+* **deps:** 更新依赖项至最新版本 ([b508112](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/b508112d135edf49a3f4b8be587d8ecbf48f9535))
+
+
+### ✨ Features | 新功能
+
+* **constants:** 移除最大重试次数配置 ([206cc72](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/206cc724b5fac6504bb7c80956b3372d02dc4a60))
+* **utils:** 替换 camelCase 工具库 ([c2a1a6f](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/c2a1a6f7efa7916bb817a8bbf12ec8a6a7b37e62))
+
 ### [0.0.8](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.7...v0.0.8) (2025-11-28)
 
 
