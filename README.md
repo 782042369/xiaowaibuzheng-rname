@@ -20,11 +20,19 @@
 npx @xiaowaibuzheng/rname [directory]
 ```
 
+或者使用更简单的别名：
+
+```bash
+npx @xiaowaibuzheng/rname [directory]
+```
+
 ### 作为 CLI 工具全局安装
 
 ```bash
 npm install -g @xiaowaibuzheng/rname
-rname [directory]
+
+# 使用命令
+wbzrname [directory]
 ```
 
 ## 使用方法
@@ -37,6 +45,18 @@ npx @xiaowaibuzheng/rname
 
 # 指定特定目录
 npx @xiaowaibuzheng/rname ./images
+```
+
+### 全局安装后使用
+
+```bash
+# 全局安装
+npm install -g @xiaowaibuzheng/rname
+
+# 在任意目录下使用
+rname
+rname ./images
+rname /path/to/your/files
 ```
 
 ### 参数说明
@@ -82,7 +102,7 @@ npx @xiaowaibuzheng/rname
 ## 依赖说明
 
 - [bing-translate-api](https://github.com/microsoft/bing-translate-api) - 用于中文翻译为英文
-- [es-toolkit](https://github.com/tjx666/adobe-devtools) - 用于字符串处理
+- [camelcase](https://github.com/sindresorhus/camelcase) - 用于字符串处理
 
 ## 许可证
 
