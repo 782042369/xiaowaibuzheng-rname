@@ -4,7 +4,7 @@
   "description": "A CLI tool for batch renaming files with Chinese characters to pinyin or English translation",
   "type": "module",
   "bin": {
-    "@xiaowaibuzheng/rname": "./dist/index.mjs"
+    "wbzrname": "./dist/index.mjs"
   },
   "scripts": {
     "watch": "tsdown --watch",
