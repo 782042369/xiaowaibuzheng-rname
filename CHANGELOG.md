@@ -1,6 +1,23 @@
 # 更新记录 
 
 
+### [0.0.10](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.9...v0.0.10) (2025-12-10)
+
+
+### ✨ Features | 新功能
+
+* **cli:** 更新命令行工具的可执行文件名 ([efcc75b](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/efcc75b6e4adc4a4f7f7381358f4f55ca9a5a3ef))
+
+
+### 📝 Documentation | 文档
+
+* **readme:** 更新 README 文档内容与使用示例 ([f899c58](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/f899c589271fd81fe84a6cdda9aa52d7514dc0c8))
+
+
+### 📦‍ Build System | 打包构建
+
+* **deps:** 更新开发依赖版本 ([3caaef7](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/3caaef79ae8be1cd1239eeda689b053d314eb1a9))
+
 ### [0.0.9](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.8...v0.0.9) (2025-11-28)
 
 
