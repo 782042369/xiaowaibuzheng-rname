@@ -1,6 +1,14 @@
 # 更新记录 
 
 
+### [0.0.11](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.10...v0.0.11) (2025-12-18)
+
+
+### 📦‍ Build System | 打包构建
+
+* **deps-dev:** 更新开发依赖版本 ([d2e70bb](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/d2e70bb27264ac83bc8c0dc16f4b2051f4ab09a1))
+* **tsdown:** 禁用类型定义文件生成 ([9fef658](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/9fef6584acd206ff2d174546e7b969a0e4e945c2))
+
 ### [0.0.10](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.9...v0.0.10) (2025-12-10)
 
 
