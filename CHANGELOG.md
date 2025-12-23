@@ -1,6 +1,18 @@
 # 更新记录 
 
 
+### [0.0.12](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.11...v0.0.12) (2025-12-23)
+
+
+### 🚀 Chore | 部署相关
+
+* **deps:** 更新开发依赖包版本 ([fb18908](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/fb189089e539cfed195329adda0f8b7eb14ab94c))
+
+
+### 📦‍ Build System | 打包构建
+
+* **config:** 移除shims配置并启用unbundle模式 ([840569f](https://github.com/782042369/xiaowaibuzheng-rname.git/commit/840569fe0e4c4c71852f693b9062dcd0236163f3))
+
 ### [0.0.11](https://github.com/782042369/xiaowaibuzheng-rname.git/compare/v0.0.10...v0.0.11) (2025-12-18)
 
 
